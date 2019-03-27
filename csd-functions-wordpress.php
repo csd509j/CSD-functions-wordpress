@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: CSD Functions - Wordpress Admin
-Version: 1.2
+Version: 1.3
 Description: Wordpress Admin Customizations for CSD School and District Theme
 Author: Josh Armentano
 Author URI: https://abidewebdesign.com
@@ -25,22 +25,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 function csd_admin_bar_render() {
 	
     global $wp_admin_bar;
-    
-    $wp_admin_bar->remove_menu('comments');
-    $wp_admin_bar->remove_menu('wpseo-menu');
-    $wp_admin_bar->remove_menu('ubermenu');
-    $wp_admin_bar->remove_menu('customize');
+
     $wp_admin_bar->remove_node('wp-logo');
     $wp_admin_bar->remove_menu('new-post');
     $wp_admin_bar->remove_menu('search');
     $wp_admin_bar->remove_menu('themes');
     $wp_admin_bar->remove_menu('widgets');
     $wp_admin_bar->remove_node('updates');
-    $wp_admin_bar->remove_menu('autoptimize');
+    $wp_admin_bar->remove_menu('searchwp');
 
 }
 add_action( 'wp_before_admin_bar_render', 'csd_admin_bar_render' );
 
+add_filter( 'searchwp_admin_bar', '__return_false' );
 /*
  * Remove unused dashboard widgets
  *
