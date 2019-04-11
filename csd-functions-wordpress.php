@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: CSD Functions - Wordpress Admin
-Version: 1.5
+Version: 1.6
 Description: Wordpress Admin Customizations and Custom Post Types for CSD School and District Theme
 Author: Josh Armentano
 Author URI: https://abidewebdesign.com
@@ -273,7 +273,7 @@ function cptui_register_my_taxes_news_category() {
 }
 add_action( 'init', 'cptui_register_my_taxes_news_category' );
 
-function cptui_register_my_cpts_emergency_alerts() {
+function cptui_register_my_cpts_emergency_alert() {
 
 	/**
 	 * Post Type: Alerts.
@@ -302,16 +302,16 @@ function cptui_register_my_cpts_emergency_alerts() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => false,
-		"rewrite" => array( "slug" => "emergency-alerts", "with_front" => true ),
+		"rewrite" => array( "slug" => "emergency-alert", "with_front" => true ),
 		"query_var" => true,
 		"menu_icon" => "dashicons-shield",
 		"supports" => array( "title" ),
 	);
 
-	register_post_type( "emergency-alerts", $args );
+	register_post_type( "emergency-alert", $args );
 }
 
-add_action( 'init', 'cptui_register_my_cpts_emergency_alerts' );
+add_action( 'init', 'cptui_register_my_cpts_emergency_alert' );
 
 function cptui_register_my_cpts_directory() {
 
