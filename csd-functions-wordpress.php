@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: CSD Functions - Wordpress Admin
-Version: 1.6
+Version: 1.7
 Description: Wordpress Admin Customizations and Custom Post Types for CSD School and District Theme
 Author: Josh Armentano
 Author URI: https://abidewebdesign.com
@@ -92,7 +92,7 @@ add_action( 'admin_head', 'hide_update_msg_non_admins');
  */
 function add_login_favicon() {
 	
-  	$favicon_url = get_stylesheet_directory_uri() . '/assets/images/admin-favicon.ico';
+  	$favicon_url = get_stylesheet_directory_uri() . '/favicon.png';
 	
 	echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
 	
