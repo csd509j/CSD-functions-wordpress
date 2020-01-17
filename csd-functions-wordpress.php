@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: CSD Functions - Wordpress Admin
-Version: 1.7
+Version: 1.8
 Description: Wordpress Admin Customizations and Custom Post Types for CSD School and District Theme
 Author: Josh Armentano
 Author URI: https://abidewebdesign.com
@@ -112,13 +112,7 @@ function admin_bar_style_override() {
 			#wpadminbar {
 				position: fixed;
 			}
-			#directory-categorydiv, .ac-message, #ac-pro-version, #direct-feedback {
-				display: none;
-			}
-			.installer-plugin-update-tr {
-				display: none;
-			}
-			.plugins .dashicons {
+			#directory-categorydiv, .ac-message, #ac-pro-version, #direct-feedback, .installer-plugin-update-tr, .plugins .dashicons, .shortpixel-notice, #emr-news, .wrap.emr_upload_form .option-flex-wrapper, .emr_upload_form #message {
 				display: none;
 			}
 		</style>
