@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: CSD Functions - Wordpress Admin
-Version: 1.8
+Version: 1.9
 Description: Wordpress Admin Customizations and Custom Post Types for CSD School and District Theme
 Author: Josh Armentano
 Author URI: https://abidewebdesign.com
@@ -59,6 +59,14 @@ function remove_dashboard_widgets() {
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 
 /*
+ * Remove unused user roles
+ *
+ */
+remove_role( 'subscriber' );
+remove_role( 'contributor' );
+remove_role( 'author' );
+
+/*
  * Remove unused admin menu items
  *
  */
@@ -112,9 +120,10 @@ function admin_bar_style_override() {
 			#wpadminbar {
 				position: fixed;
 			}
-			#directory-categorydiv, .ac-message, #ac-pro-version, #direct-feedback, .installer-plugin-update-tr, .plugins .dashicons, .shortpixel-notice, #emr-news, .wrap.emr_upload_form .option-flex-wrapper, .emr_upload_form #message {
+			#your-profile h2,form#your-profile > h3, form#your-profile .user-profile-picture, form#your-profile .user-description-wrap, form#your-profile .user-display-name-wrap, form#your-profile .user-nickname-wrap, form#your-profile .show-admin-bar, .user-comment-shortcuts-wrap, form#your-profile .yoast-settings, form#your-profile .user-rich-editing-wrap, form#your-profile .user-admin-color-wrap, form#your-profile .user-url-wrap, form#your-profile .user-facebook-wrap, form#your-profile .user-instagram-wrap, form#your-profile .user-linkedin-wrap, form#your-profile .user-myspace-wrap, form#your-profile .user-pinterest-wrap, form#your-profile .user-soundcloud-wrap, form#your-profile .user-tumblr-wrap, form#your-profile .user-twitter-wrap, form#your-profile .user-youtube-wrap, form#your-profile .user-wikipedia-wrap, #directory-categorydiv, .ac-message, #ac-pro-version, #direct-feedback, .installer-plugin-update-tr, .plugins .dashicons, .shortpixel-notice, #emr-news, .wrap.emr_upload_form .option-flex-wrapper, .emr_upload_form #message {
 				display: none;
 			}
+
 		</style>
 	<?php
 		
