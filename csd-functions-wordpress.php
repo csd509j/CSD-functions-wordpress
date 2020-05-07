@@ -34,7 +34,7 @@ function csd_admin_bar_render() {
     $wp_admin_bar->remove_node('updates');
     $wp_admin_bar->remove_menu('searchwp');
     $wp_admin_bar->remove_menu('delete-cache');
-$wp_admin_bar->remove_menu('litespeed-menu');
+	$wp_admin_bar->remove_menu('litespeed-menu');
 }
 add_action( 'wp_before_admin_bar_render', 'csd_admin_bar_render' );
 
