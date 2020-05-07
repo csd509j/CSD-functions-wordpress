@@ -74,7 +74,6 @@ function csd_menu_page_removing() {
 	
 	remove_menu_page( 'edit-comments.php' );
 	remove_menu_page( 'edit.php' );
-//     remove_menu_page( 'tools.php' );
     
 }
 add_action( 'admin_menu', 'csd_menu_page_removing' );
