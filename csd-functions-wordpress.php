@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: CSD Functions - Wordpress Admin
-Version: 2.0
+Version: 2.1
 Description: Wordpress Admin Customizations and Custom Post Types for CSD School and District Theme
 Author: Josh Armentano
 Author URI: https://abidewebdesign.com
@@ -57,6 +57,13 @@ function remove_dashboard_widgets() {
 
 }
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
+
+/*
+ * Disable plugin/theme auto-update email notifications
+ *
+ */
+add_filter( 'auto_plugin_update_send_email', '__return_false' );
+add_filter( 'auto_theme_update_send_email', '__return_false' );
 
 /*
  * Remove unused user roles
